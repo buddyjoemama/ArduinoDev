@@ -1,0 +1,1 @@
+avrdude -c usbtiny -p m32u4 -U flash:w:%1

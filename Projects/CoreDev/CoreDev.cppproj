@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8</ToolchainName>
+    <ProjectGuid>{15ca6a34-6322-42d2-b0c8-63538a7cd292}</ProjectGuid>
+    <avrdevice>ATmega32U4</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>CoreDev</AssemblyName>
+    <Name>CoreDev</Name>
+    <RootNamespace>CoreDev</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue />
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfVersion>3.1.3</AsfVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+        <avrgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>m</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.Libraries>
+      </AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>C:\ArduinoDev\ArduinoDev\Projects\CoreDev\Arduino</Value>
+      <Value>C:\ArduinoDev\ArduinoDev\ArduinoVariants\leonardo</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>C:\ArduinoDev\ArduinoDev\Projects\CoreDev\Arduino</Value>
+      <Value>C:\ArduinoDev\ArduinoDev\ArduinoVariants\leonardo</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>m</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
+    </ToolchainSettings>
+    <UsesExternalMakeFile>False</UsesExternalMakeFile>
+    <PostBuildEvent>copy bin\CoreDev.a ..\..\bin</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Arduino\Arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\binary.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\CDC.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\Client.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\HardwareSerial.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\HardwareSerial.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\HID.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\IPAddress.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\IPAddress.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\new.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\new.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\Platform.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\Print.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\Print.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\Printable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\Server.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\Stream.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\Stream.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\Tone.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\Udp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\USBAPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\USBCore.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\USBCore.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\USBDesc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\WCharacter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\WInterrupts.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\wiring.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\wiring_analog.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\wiring_digital.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\wiring_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\wiring_pulse.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\wiring_shift.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\WMath.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\WString.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Arduino\WString.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="CoreDev.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Arduino" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

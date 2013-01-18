@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "CoreDev", "CoreDev\CoreDev.cppproj", "{15CA6A34-6322-42D2-B0C8-63538A7CD292}"
+EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "ArduinoBootloader", "ArduinoBootloader\ArduinoBootloader.cppproj", "{499BD9BA-6579-412B-9BAC-028242321E89}"
+EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "SampleApp", "SampleApp\SampleApp.cppproj", "{BD9DE7F2-2FFD-490D-86FA-23AD579D3B4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15CA6A34-6322-42D2-B0C8-63538A7CD292}.Debug|AVR.ActiveCfg = Debug|AVR
+		{15CA6A34-6322-42D2-B0C8-63538A7CD292}.Debug|AVR.Build.0 = Debug|AVR
+		{15CA6A34-6322-42D2-B0C8-63538A7CD292}.Release|AVR.ActiveCfg = Release|AVR
+		{15CA6A34-6322-42D2-B0C8-63538A7CD292}.Release|AVR.Build.0 = Release|AVR
+		{499BD9BA-6579-412B-9BAC-028242321E89}.Debug|AVR.ActiveCfg = Debug|AVR
+		{499BD9BA-6579-412B-9BAC-028242321E89}.Debug|AVR.Build.0 = Debug|AVR
+		{499BD9BA-6579-412B-9BAC-028242321E89}.Release|AVR.ActiveCfg = Release|AVR
+		{499BD9BA-6579-412B-9BAC-028242321E89}.Release|AVR.Build.0 = Release|AVR
+		{BD9DE7F2-2FFD-490D-86FA-23AD579D3B4C}.Debug|AVR.ActiveCfg = Debug|AVR
+		{BD9DE7F2-2FFD-490D-86FA-23AD579D3B4C}.Debug|AVR.Build.0 = Debug|AVR
+		{BD9DE7F2-2FFD-490D-86FA-23AD579D3B4C}.Release|AVR.ActiveCfg = Release|AVR
+		{BD9DE7F2-2FFD-490D-86FA-23AD579D3B4C}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
