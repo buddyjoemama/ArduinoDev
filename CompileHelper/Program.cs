@@ -75,6 +75,8 @@ namespace CompileHelper
                     libraries[i] = Path.Combine(projectDirectory, libraries[i]);
             }
 
+            libraries.AddRange(Directory.EnumerateDirectories(projectDirectory, "*", SearchOption.AllDirectories));
+
             // Main source file is relative to the base source directory. Concat the paths.
             mainSourceFile = Path.Combine(projectDirectory, mainSourceFile);
 
@@ -86,7 +88,10 @@ namespace CompileHelper
 
             String[] allCFiles = Directory.EnumerateFiles(projectDirectory, "*.c", SearchOption.AllDirectories).ToArray();
             String[] allCPPFiles = Directory.EnumerateFiles(projectDirectory, "*.cpp", SearchOption.AllDirectories)
-                .Where(s => s.EndsWith(".cpp")).ToArray();
+                .Where(s => s.EndsWith(".cpp")).Union(
+                (from lib in libraries
+                 from allFiles in Directory.EnumerateFiles(lib, "*.cpp")
+                 select allFiles).Select(s => s)).ToArray();
 
             // Base cpp complile command
             String baseCPPCompileCommand = @"-c -g -Os -Wall -fno-exceptions -ffunction-sections -mmcu=atmega32u4 -DF_CPU=16000000L -MMD -DUSB_VID=0x2341 -DUSB_PID=0x8036 -DARDUINO=101"; // Base compilation string -I{0} {1} -o {2}.o";
