@@ -31,6 +31,7 @@ namespace CompileHelper
             String baseOutputDir = null;
             String mainSourceFile = null;
             String projectFile = null;
+            String codeDir = null;
             List<String> libraries = new List<string>();
             List<String> links = new List<string>();
 
@@ -53,6 +54,10 @@ namespace CompileHelper
                 {
                     projectFile = argVal[1];
                 }
+                else if (argVal[0].Contains("-c"))
+                {
+                    codeDir = argVal[1];
+                }
             }
 
             // Process included libraries from project file
@@ -61,6 +66,15 @@ namespace CompileHelper
             // Fix relative paths.
             if(!Path.IsPathRooted(baseOutputDir))
                 baseOutputDir = Path.Combine(projectDirectory, baseOutputDir);
+
+            // Get the main code directory.
+            if (!Path.IsPathRooted(codeDir))
+            {
+                codeDir = Path.Combine(projectDirectory, codeDir);
+
+                if(Directory.Exists(codeDir))
+                    libraries.Add(codeDir);
+            }
 
             // Main source file is <project name>.cpp
             if (mainSourceFile == null)
@@ -75,8 +89,6 @@ namespace CompileHelper
                     libraries[i] = Path.Combine(projectDirectory, libraries[i]);
             }
 
-            libraries.AddRange(Directory.EnumerateDirectories(projectDirectory, "*", SearchOption.AllDirectories));
-
             // Main source file is relative to the base source directory. Concat the paths.
             mainSourceFile = Path.Combine(projectDirectory, mainSourceFile);
 
@@ -86,7 +98,12 @@ namespace CompileHelper
             Console.WriteLine("Output directory: {0}", baseOutputDir);
             Console.WriteLine("Main source file: {0}\n", mainSourceFile);
 
-            String[] allCFiles = Directory.EnumerateFiles(projectDirectory, "*.c", SearchOption.AllDirectories).ToArray();
+            String[] allCFiles = Directory.EnumerateFiles(projectDirectory, "*.c", SearchOption.AllDirectories)
+                .Where(s => s.EndsWith(".c")).Union(
+                    (from lib in libraries
+                     from allFiles in Directory.EnumerateFiles(lib, "*.c")
+                     select allFiles).Select(s => s)).ToArray();
+
             String[] allCPPFiles = Directory.EnumerateFiles(projectDirectory, "*.cpp", SearchOption.AllDirectories)
                 .Where(s => s.EndsWith(".cpp")).Union(
                 (from lib in libraries

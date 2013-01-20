@@ -51,153 +51,153 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <AvrGccCpp>
-  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
-  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
-  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
-  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
-  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-  <avrgcc.compiler.directories.IncludePaths>
-    <ListValues>
-      <Value>C:\ArduinoDev\ArduinoDev\ArduinoVariants\leonardo</Value>
-      <Value>C:\ArduinoDev\ArduinoDev\libraries\SPI</Value>
-    </ListValues>
-  </avrgcc.compiler.directories.IncludePaths>
-  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
-  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
-  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
-  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
-  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
-  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
-  <avrgcccpp.compiler.directories.IncludePaths>
-    <ListValues>
-      <Value>C:\ArduinoDev\ArduinoDev\ArduinoVariants\leonardo</Value>
-      <Value>C:\ArduinoDev\ArduinoDev\libraries\SPI</Value>
-    </ListValues>
-  </avrgcccpp.compiler.directories.IncludePaths>
-  <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
-  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
-  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
-  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
-  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
-  <avrgcccpp.linker.libraries.Libraries>
-    <ListValues>
-      <Value>m</Value>
-    </ListValues>
-  </avrgcccpp.linker.libraries.Libraries>
-  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
-</AvrGccCpp>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>C:\ArduinoDev\ArduinoDev\ArduinoVariants\leonardo</Value>
+            <Value>C:\ArduinoDev\ArduinoDev\libraries\SPI</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>C:\ArduinoDev\ArduinoDev\ArduinoVariants\leonardo</Value>
+            <Value>C:\ArduinoDev\ArduinoDev\libraries\SPI</Value>
+          </ListValues>
+        </avrgcccpp.compiler.directories.IncludePaths>
+        <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+        <avrgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>m</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.Libraries>
+        <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+      </AvrGccCpp>
     </ToolchainSettings>
     <UsesExternalMakeFile>False</UsesExternalMakeFile>
     <PostBuildEvent>copy bin\CoreDev.a ..\..\bin</PostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Arduino\Arduino.h">
+    <Compile Include="Code\Arduino.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\binary.h">
+    <Compile Include="Code\binary.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\CDC.cpp">
+    <Compile Include="Code\CDC.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\Client.h">
+    <Compile Include="Code\Client.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\HardwareSerial.cpp">
+    <Compile Include="Code\HardwareSerial.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\HardwareSerial.h">
+    <Compile Include="Code\HardwareSerial.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\HID.cpp">
+    <Compile Include="Code\HID.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\IPAddress.cpp">
+    <Compile Include="Code\IPAddress.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\IPAddress.h">
+    <Compile Include="Code\IPAddress.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\main.cpp">
+    <Compile Include="Code\main.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\new.cpp">
+    <Compile Include="Code\new.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\new.h">
+    <Compile Include="Code\new.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\Platform.h">
+    <Compile Include="Code\Platform.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\Print.cpp">
+    <Compile Include="Code\Print.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\Print.h">
+    <Compile Include="Code\Print.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\Printable.h">
+    <Compile Include="Code\Printable.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\Server.h">
+    <Compile Include="Code\Server.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\Stream.cpp">
+    <Compile Include="Code\Stream.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\Stream.h">
+    <Compile Include="Code\Stream.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\Tone.cpp">
+    <Compile Include="Code\Tone.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\Udp.h">
+    <Compile Include="Code\Udp.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\USBAPI.h">
+    <Compile Include="Code\USBAPI.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\USBCore.cpp">
+    <Compile Include="Code\USBCore.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\USBCore.h">
+    <Compile Include="Code\USBCore.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\USBDesc.h">
+    <Compile Include="Code\USBDesc.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\WCharacter.h">
+    <Compile Include="Code\WCharacter.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\WInterrupts.c">
+    <Compile Include="Code\WInterrupts.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\wiring.c">
+    <Compile Include="Code\wiring.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\wiring_analog.c">
+    <Compile Include="Code\wiring_analog.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\wiring_digital.c">
+    <Compile Include="Code\wiring_digital.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\wiring_private.h">
+    <Compile Include="Code\wiring_private.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\wiring_pulse.c">
+    <Compile Include="Code\wiring_pulse.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\wiring_shift.c">
+    <Compile Include="Code\wiring_shift.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\WMath.cpp">
+    <Compile Include="Code\WMath.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\WString.cpp">
+    <Compile Include="Code\WString.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Arduino\WString.h">
+    <Compile Include="Code\WString.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="CoreDev.cpp">
@@ -205,7 +205,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Arduino" />
+    <Folder Include="Code" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

@@ -59,7 +59,7 @@
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
       <Value>C:\ArduinoDev\ArduinoDev\ArduinoVariants\leonardo</Value>
-      <Value>C:\ArduinoDev\ArduinoDev\Projects\CoreDev\Arduino</Value>
+      <Value>C:\ArduinoDev\ArduinoDev\Projects\CoreDev\Code</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -71,7 +71,7 @@
   <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>C:\ArduinoDev\ArduinoDev\Projects\CoreDev\Arduino</Value>
+      <Value>C:\ArduinoDev\ArduinoDev\Projects\CoreDev\Code</Value>
       <Value>C:\ArduinoDev\ArduinoDev\ArduinoVariants\leonardo</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
@@ -85,11 +85,6 @@
       <Value>m</Value>
     </ListValues>
   </avrgcccpp.linker.libraries.Libraries>
-  <avrgcccpp.linker.libraries.LibrarySearchPaths>
-    <ListValues>
-      <Value>C:\ArduinoDev\ArduinoDev\bin</Value>
-    </ListValues>
-  </avrgcccpp.linker.libraries.LibrarySearchPaths>
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
@@ -100,15 +95,6 @@
     <Compile Include="DS3234RTC.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Test\RTC_DS3234.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Test\RTC_DS3234.h">
-      <SubType>compile</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Test" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
